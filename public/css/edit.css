@@ -107,6 +107,15 @@ a.dropdown-trigger {
     box-shadow: 0 1px 0 0 #FFC700 !important;
 }
 
+.input-field textarea:focus + label {
+    color: #FFC700 !important;
+}
+
+.input-field textarea:focus {
+    border-bottom: 1px solid #FFC700 !important;
+    box-shadow: 0 1px 0 0 #FFC700 !important;
+}
+
 .btn.modal-submit {
     background-color: #FFC700 !important;
 }
@@ -125,6 +134,16 @@ ul.dropdown-content.select-dropdown li span {
    box-shadow: 0 1px 0 0 red !important;
 }
 
+.input-field textarea.valid {
+    border-bottom: 1px solid #FFC700 !important;
+    box-shadow: 0 1px 0 0 #FFC700 !important;
+}
+  
+.input-field textarea.invalid {
+   border-bottom: 1px solid red !important;
+   box-shadow: 0 1px 0 0 red !important;
+}
+  
 .material-icons.active {
     color: #FFC700 !important;
 }
@@ -146,4 +165,21 @@ ul span {
 
 .container-1280 {
     max-width: 1280px !important
+}
+
+@media (max-width: 600px) { 
+
+  h3 {
+      padding: 0 20px;
+      font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 1000px) { 
+
+  .brand-logo {
+      padding-left: 30px !important;
+  }
+
 }

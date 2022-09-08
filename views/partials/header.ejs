@@ -9,7 +9,7 @@
                 <%}%>
                 <ul id="nav-mobile" class="right">
                     <%if(user){%>
-                    <li><a class="hover-gold" href="/">Your Reviews</a></li>
+                    <li><a class="hover-gold" href="/">Dashboard</a></li>
                     <li><a class="hover-gold padding-right-0" href="/logout">Logout</a></li>
                     <%}else{ %>
                     <li><a class="hover-gold" href="/login">Login</a></li>
@@ -29,58 +29,51 @@
             </div>
         </div>
         <form class= "formReview black-text" action="/reviews/createCheckin" method='POST' id="submitForm">
-        <div class="row">
+        <div class="row no-margin-bottom">
             <div class="col s12 input-field">
-                <input tabindex="1" class="validate" type="text" name='restaurant' id="restaurant-modal">
+                <input tabindex="1" class="validate" type="text" name='restaurant' id="restaurant-modal" maxlength="50" required>
                 <label for="restaurant-modal">Restaurant Name</label>
             </div>
         </div>
-        <div class="row">
-            <div class="col s4 input-field">
-                <!-- <select class='browser-default' name="country" id="country">
-                <% for (let i = 0; i < countryData.length; i++) { %>
-                    <option value=<%= countryData[i].name.split(' ').join('-') %>><%= countryData[i].name %></option>
-                <% } %>
-                </select> -->
-                <input name="country" tabindex="2" type="text" class="autocomplete validate" id="autocomplete-input" required>
+        <div class="row no-margin-bottom">
+            <div class="col s12 m12 l4 input-field">
+                <input name="country" tabindex="2" type="text" class="autocomplete validate" id="autocomplete-input" maxlength="60" required>
                 <label for="autocomplete-input">Country</label>
             </div>
-            <div class="col s4 input-field">
-                <input tabindex="3" class="validate" type="text" name='state' id="state-modal" required>
+            <div class="col s12 m6 l4 input-field">
+                <input tabindex="3" class="validate" type="text" name='state' id="state-modal" maxlength="40" required>
                 <label for="state-modal">State/Province/Region</label>
             </div>
-            <div class="col s4 input-field">
-                <input tabindex="4" class="validate" type="text" name='city' id="city-modal" required>
+            <div class="col s12 m6 l4 input-field">
+                <input tabindex="4" class="validate" type="text" name='city' id="city-modal" maxlength="40" required>
                 <label for="city-modal">City</label>
             </div>
         </div>
-        <div class="row">
-            <div class="col s6 input-field">
-                <input tabindex="5" class="validate" type="text" name='foodType' id="foodType-modal" required>
+        <div class="row no-margin-bottom">
+            <div class="col s12 m12 l6 input-field">
+                <input tabindex="5" class="validate" type="text" name='foodType' id="foodType-modal" maxlength="30" required>
                 <label for="foodType-modal">Type of Food</label>
             </div>
-            <div class="col s6 input-field">
-                <input tabindex="6" class="validate" type="text" name='favDish' id="favDish-modal" required>
+            <div class="col s12 m12 l6 input-field">
+                <input tabindex="6" class="validate" type="text" name='favDish' id="favDish-modal" maxlength="80" required>
                 <label for="favDish-modal">Favorite Dish</label>
             </div>
         </div>
-        <div class="row">
+        <div class="row no-margin-bottom">
             <div class="col s12 input-field">
-                <input tabindex="7" class="validate" type="text" name='comment' id="comment-modal" required>
+                <textarea tabindex="7" class="materialize-textarea validate" type="text" name='comment' id="comment-modal" required></textarea>
                 <label for="comment-modal">Comment</label>
             </div>
         </div>
-        <div class="row">
-            <div class="col s9 input-field">
-                <!-- tab index doesn't work on select -->
-                <select id="status" name="status" tabindex="8" class="validate">
+        <div class="row no-margin-bottom">
+            <div class="col s12 input-field">
+                <select id="status" name="status" tabindex="8" class="validate" required>
                         <option value="public" selected>Public</option>
                         <option value="private" >Private</option>  
                 </select>
             </div>
-            <div class="col s3 input-field">
-                <button class="btn waves-effect waves-light modal-submit right" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
+            <div class="col s6 offset-s3 m4 offset-m4 input-field">
+                <button class="width-100 btn waves-effect waves-light modal-submit center" type="submit" name="action">Submit
                 </button>
             </div>
         </div>

@@ -4,46 +4,46 @@
     <form class="modalForm" action="/reviews/update" method='POST' id="<%=post._id%>">
         <input type="hidden" name="_method" value="PUT">
         <input type="hidden" name="_id" value="<%=post._id%>">
-        <div class="row">
+        <div class="row no-margin-bottom">
             <div class="col s12 input-field">
-                <input tabindex="1" class="validate" type="text" value="<%=post.restaurant%>" name='restaurant' id="restaurant-modal" required>
+                <input tabindex="1" class="validate" type="text" value="<%=post.restaurant%>" name='restaurant' id="restaurant-modal" maxlength="50" required>
                 <label for="restaurant-modal">Restaurant Name</label>
             </div>
         </div>
-        <div class="row">
+        <div class="row no-margin-bottom">
             <div class="col s12 m12 l4 input-field">
-                <input name="country" tabindex="2" type="text" class="autocomplete validate" id="autocomplete-input" value='<%=post.country.split('-').join(' ')%>' required>
+                <input name="country" tabindex="2" type="text" class="autocomplete validate" id="autocomplete-input" maxlength="60" value='<%=post.country.split('-').join(' ')%>' required>
                 <label for="autocomplete-input">Country</label>
             </div>
             <div class="col s12 m6 l4 input-field">
-                <input tabindex="3" class="validate" type="text" name='state' id="state-modal" value="<%=post.state%>" required>
+                <input tabindex="3" class="validate" type="text" name='state' id="state-modal" maxlength="40" value="<%=post.state%>" required>
                 <label for="state-modal">State/Province/Region</label>
             </div>
             <div class="col s12 m6 l4 input-field">
-                <input tabindex="4" class="validate" type="text" name='city' id="city-modal" value="<%=post.city%>" required>
+                <input tabindex="4" class="validate" type="text" name='city' id="city-modal" maxlength="40" value="<%=post.city%>" required>
                 <label for="city-modal">City</label>
             </div>
         </div>
-        <div class="row">
+        <div class="row no-margin-bottom">
             <div class="col s12 m6 l6 input-field">
-                <input tabindex="5" class="validate" type="text" name='foodType' id="foodType-modal" value="<%=post.foodType%>" required>
+                <input tabindex="5" class="validate" type="text" name='foodType' maxlength="30" id="foodType-modal" value="<%=post.foodType%>" required>
                 <label for="foodType-modal">Type of Food</label>
             </div>
             <div class="col s12 m6 l6 input-field">
-                <input tabindex="6" class="validate" type="text" name='favDish' id="favDish-modal" value="<%=post.favDish%>" required>
+                <input tabindex="6" class="validate" type="text" name='favDish' id="favDish-modal" maxlength="80" value="<%=post.favDish%>" required>
                 <label for="favDish-modal">Favorite Dish</label>
             </div>
         </div>
-        <div class="row">
+        <div class="row no-margin-bottom">
             <div class="col s12 input-field">
-                <input tabindex="7" class="validate" type="text" name='comment' id="comment-modal" value="<%=post.comment%>" required>
+                <textarea tabindex="7" class="materialize-textarea validate" type="text" name='comment' id="comment-modal" minlength="40" maxlength="200" required><%=post.comment%></textarea>
                 <label for="comment-modal">Comment</label>
             </div>
         </div>
-        <div class="row">
+        <div class="row no-margin-bottom">
             <div class="col s4 m6 l6 input-field">
                 <!-- tab index doesn't work on select -->
-                <select id="status" name="status" tabindex="8" class="validate">
+                <select id="status" name="status" tabindex="8" class="validate" required>
                     <% if(post.status == "public"){ %>
                         <option value="public" selected>Public</option>
                         <option value="private" >Private</option>  

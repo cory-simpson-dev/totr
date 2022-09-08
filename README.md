@@ -2,7 +2,7 @@
 
 Full-stack social application for logging private and public restaurant experiences. Public experiences are available to any website visitor; however, an account is necessary to post and interact with other reviews.
 
-[Tast of the Town](https://totr.up.railway.app/ "Taste of the Town")
+[LIVE SITE](https://totr-production.up.railway.app/ "Taste of the Town")
 
 ## Features
 
@@ -15,8 +15,8 @@ This node.js application primarily utilizes ejs for templating, express for serv
 ## Current Objectives
 
 - improve UX/UI
+- render error pages
 - add filter search options
-- set form limitations
 - add like feature
 
 ## Use

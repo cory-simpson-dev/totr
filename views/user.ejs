@@ -14,7 +14,7 @@
 
   <%posts.forEach(post=>{ %>
     <div class="row no-margin-bottom" data-id='<%=post._id%>'>
-      <div class="col offset-s1 s10">
+      <div class="col s12 offset-m1 m10">
         <div class="card padding">
           <div class="row margin-bottom-10">
             <!-- <div class="col s2 center">
@@ -41,6 +41,11 @@
                       <span><%=post.city.toUpperCase()%>, <%=post.state.toUpperCase()%>, <%=post.country.split('-').join(' ').toUpperCase()%></span>                    
                     </div>
                   </div>
+                  <div class="row margin-bottom-10">
+                    <div class="col s12">
+                      <span class="left no-margin"><%=post.favDish%></span>
+                    </div>
+                  </div>
                 <%}else{%>
                   <div class="row margin-bottom-10">
                     <div class="col s12">
@@ -55,6 +60,11 @@
                   <div class="row margin-bottom-10">
                     <div class="col s12">
                       <span><%=post.city.toUpperCase()%>, <%=post.state.toUpperCase()%>, <%=post.country.split('-').join(' ').toUpperCase()%></span>                    
+                    </div>
+                  </div>
+                  <div class="row margin-bottom-10">
+                    <div class="col s12">
+                      <span class="left no-margin"><%=post.favDish%></span>
                     </div>
                   </div>
                   <%}%>
@@ -72,6 +82,11 @@
                 <div class="row margin-bottom-10">
                   <div class="col s12">
                     <span><%=post.city.toUpperCase()%>, <%=post.state.toUpperCase()%>, <%=post.country.split('-').join(' ').toUpperCase()%></span>                  
+                  </div>
+                </div>
+                <div class="row margin-bottom-10">
+                  <div class="col s12">
+                    <span class="left no-margin"><%=post.favDish%></span>
                   </div>
                 </div>
               <%}%>
@@ -104,6 +119,4 @@
       
       <%}) %>
 
-
-    
 </main>
