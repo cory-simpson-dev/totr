@@ -1,0 +1,67 @@
+<main class="container">
+    <div class="container-1280 center">
+        <h3>Edit Your Review</h3>
+    <form class="modalForm" action="/reviews/update" method='POST' id="<%=post._id%>">
+        <input type="hidden" name="_method" value="PUT">
+        <input type="hidden" name="_id" value="<%=post._id%>">
+        <div class="row">
+            <div class="col s12 input-field">
+                <input tabindex="1" class="validate" type="text" value="<%=post.restaurant%>" name='restaurant' id="restaurant-modal" required>
+                <label for="restaurant-modal">Restaurant Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m12 l4 input-field">
+                <input name="country" tabindex="2" type="text" class="autocomplete validate" id="autocomplete-input" value='<%=post.country.split('-').join(' ')%>' required>
+                <label for="autocomplete-input">Country</label>
+            </div>
+            <div class="col s12 m6 l4 input-field">
+                <input tabindex="3" class="validate" type="text" name='state' id="state-modal" value="<%=post.state%>" required>
+                <label for="state-modal">State/Province/Region</label>
+            </div>
+            <div class="col s12 m6 l4 input-field">
+                <input tabindex="4" class="validate" type="text" name='city' id="city-modal" value="<%=post.city%>" required>
+                <label for="city-modal">City</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m6 l6 input-field">
+                <input tabindex="5" class="validate" type="text" name='foodType' id="foodType-modal" value="<%=post.foodType%>" required>
+                <label for="foodType-modal">Type of Food</label>
+            </div>
+            <div class="col s12 m6 l6 input-field">
+                <input tabindex="6" class="validate" type="text" name='favDish' id="favDish-modal" value="<%=post.favDish%>" required>
+                <label for="favDish-modal">Favorite Dish</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 input-field">
+                <input tabindex="7" class="validate" type="text" name='comment' id="comment-modal" value="<%=post.comment%>" required>
+                <label for="comment-modal">Comment</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s4 m6 l6 input-field">
+                <!-- tab index doesn't work on select -->
+                <select id="status" name="status" tabindex="8" class="validate">
+                    <% if(post.status == "public"){ %>
+                        <option value="public" selected>Public</option>
+                        <option value="private" >Private</option>  
+                    <% }else { %>
+                        <option value="public" >Public</option>
+                        <option value="private" selected>Private</option>   
+                    <% } %> 
+                </select>
+            </div>
+            <div class="col s4 m3 l3 input-field">
+                <button class="width-100 btn waves-effect waves-light modal-submit center" type="submit" name="action">Submit
+                </button>
+            </div>
+            <div class="col s4 m3 l3 input-field">
+                <button class="width-100 btn waves-effect waves-light black center"><a href="./" class="white-text hover-gold" value="cancel" id="cancel" onclick= "return confirm('Are you sure you want to cancel this edit?')">Cancel</button>
+                </button>
+            </div>
+        </div>
+    </form>
+    </div>    
+</main>

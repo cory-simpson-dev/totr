@@ -1,0 +1,228 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #fcfcfc;
+}
+
+main {
+    flex: 1 0 auto;
+    max-width: 1400px;
+}
+
+h1 {
+    margin: 2rem 0;
+}
+h2 {
+    margin: 60px;
+}
+h5 {
+    margin: 1rem 0;
+}
+#footer {
+    padding: 0;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.width-vw {
+    width: 100vw;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.row.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-right-20 {
+    margin-right: 20px;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+.padding-20 {
+    padding: 20px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.text-orange {
+    color: #FFC700;
+}
+
+.bg-gold {
+    background-color: #FFC700;
+}
+
+.gold-text {
+    color: #FFC700;
+}
+
+a.dropdown-trigger {
+    height: 22.5px;
+}
+
+.btn {
+    font-family: 'Poppins', sans-serif;
+}
+
+.brand-logo:hover {
+    color: #FFC700 !important;
+}
+
+.hover-gold:hover {
+    color: #FFC700 !important;
+  }
+
+.input-field input:focus + label {
+    color: #FFC700 !important;
+}
+
+.input-field input:focus {
+    border-bottom: 1px solid #FFC700 !important;
+    box-shadow: 0 1px 0 0 #FFC700 !important;
+}
+
+.btn.modal-submit {
+    background-color: #FFC700;
+}
+
+ul.dropdown-content.select-dropdown li span {
+    color: #FFC700;
+}
+
+.input-field input.valid {
+    border-bottom: 1px solid #FFC700 !important;
+    box-shadow: 0 1px 0 0 #FFC700 !important;
+}
+
+.input-field input.invalid {
+   border-bottom: 1px solid red !important;
+   box-shadow: 0 1px 0 0 red !important;
+}
+
+.material-icons.active {
+    color: #FFC700 !important;
+}
+
+.hero {
+    background-size: cover;
+    background-attachment: local;
+    background-position: center ;
+    background-image: url("/heroimage.webp");
+}
+
+.hero-title {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 11em;
+    color: white;
+    text-shadow: 12px 12px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-tagline {
+    font-family: 'IBM Plex Sans';
+    font-weight: 700;
+    font-size: 40px;
+    color: #FFFFFF;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 1);
+    margin: 30px !important;
+}
+
+.btn {
+    font-family: 'IBM Plex Sans';
+    font-weight: 600;
+    font-size: 32px;
+    border-radius: 5px;
+    padding: 8px;
+    text-transform: lowercase;
+    height: 56px;
+}
+
+.black-border {
+    border: 1px solid black;
+}
+
+.margin-top-40 {
+    margin-top: 40px;
+}
+
+.margin-top-6 {
+    margin-top: 6px;
+}
+
+.flex-column-justify-center {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+.banner {
+    height: 100px;
+    padding: 10px 0 20px 0;
+}
+
+.italics {
+    font-style: italic;
+}
+
+.slider .slides {
+    background-color: #FFC700 !important;
+}
+
+.indicator-item {
+    height: 8px !important;
+    width: 8px !important;
+    margin: 0 8px !important
+}
+
+.indicator-item.active {
+    background-color: #fcfcfc !important;
+}
+
+.slider .indicators {
+    bottom: 0;
+    margin-bottom: 10px !important;
+}
+
+@media (max-width: 450px) { 
+
+    .hero-title {
+        font-size: 7em;
+    }
+    
+    .hero-tagline {
+        font-size: 32px;
+    }
+
+}
+
+@media (max-width: 1000px) { 
+
+    .brand-logo {
+        padding-left: 30px !important;
+    }
+    
+}

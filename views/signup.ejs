@@ -1,0 +1,58 @@
+<main class="container main margin-bottom-60">
+    <h2 class="bold center">join us in the TOTRverse</h2>
+    <div class="container">
+      <% if (locals.messages.errors) { %>
+        <% messages.errors.forEach( el => { %>
+            <div class="alert alert-danger"><%= el.msg %></div>
+        <% }) %>    
+      <% } %>
+      <div class="container login-container center z-depth-1">
+        <div class="row">
+          <div class="col s12">
+            <h3 class="no-margin bold">SIGN UP</h3>
+          </div>
+        </div>
+        <form action="/signup" method="POST">
+        <div class="row no-margin">
+          <div class="col s12 input-field no-margin-bottom">
+            <i class="material-icons prefix">person</i>
+            <input tabindex="1" class="validate" type="text" name='userName' id="userName-input">
+            <label for="userName-input">user name</label>
+          </div>
+        </div>
+        <div class="row no-margin">
+          <div class="col s12 input-field no-margin-bottom">
+            <i class="material-icons prefix">email</i>
+            <input tabindex="2" class="validate" type="email" name='email' id="email-input">
+            <label for="email-input">email</label>
+          </div>
+        </div>
+        <div class="row no-margin">
+          <div class="col s12 input-field no-margin-bottom">
+            <i class="material-icons prefix">lock</i>
+            <input tabindex="3" minlength="8" class="validate" type="password" name='password' id="password-input">
+            <label for="password-input">password</label>
+          </div>
+        </div>
+        <div class="row no-margin">
+          <div class="col s12 input-field no-margin-bottom">
+            <i class="material-icons prefix">lock_outline</i>
+            <input tabindex="4" minlength="8" class="validate" type="password" name='confirmPassword' id="confirmPassword-input">
+            <label for="confirmPassword-input">confirm password</label>
+          </div>
+        </div>
+        <div class="row no-margin">
+          <div class="col s8 offset-s2 m6 offset-m3 l6 offset-l3 input-field">
+            <button tabindex="5" class="btn waves-effect waves-light modal-submit width-100 black-text bold" type="submit" name="action">Sign Up
+            </button>
+          </div>
+        </div>
+        <div class="row no-margin">
+          <div class="col s8 offset-s2 m6 offset-m3 l6 offset-l3 input-field">
+            <a href="/login" tabindex="6" class="btn waves-effect waves-light modal-submit width-100 black-text bold">Log In
+            </a>
+          </div>
+        </div>
+        </form>
+    </div>
+</main>

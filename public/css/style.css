@@ -1,0 +1,236 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #fcfcfc;
+}
+
+main {
+  flex: 1 0 auto;
+  max-width: 1400px;
+}
+
+h1 {
+  margin: 2rem 0;
+}
+
+h5 {
+  margin: 1rem 0;
+}
+
+#footer {
+  padding: 0;
+}
+
+/*used inline block to make the main page posts be next to each other (now by 3, like they're POst-its. if you want to only 2 posts per row, go to .card-content.black-text here on CSS and change the width to "40rem" ).*/
+.card {
+  background-color:  #FFF;
+  box-shadow: 6px 6px 25px rgb(0 0 0 / 25%);
+  border-radius: 10px;
+}
+
+.card.padding {
+  padding: 20px;
+}
+
+/* this is the size of each post on the main page. If you want just only 2 posts per row change the width to 40rem*/
+.card-content.black-text{
+  min-height: 20rem; 
+  width: 20em;
+}
+
+.card-title{
+  font-weight: 400 !important;
+  text-align: center;
+}
+
+.foodTypeSection{
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.commentSection {
+  font-size: 20px;
+}
+
+/* css for login/signup */
+
+.login-container {
+  padding: 20px;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.width-vw {
+  width: 100vw;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.row.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.margin-right-20 {
+  margin-right: 20px;
+}
+
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+
+.padding-20 {
+  padding: 20px;
+}
+
+.padding-right-0 {
+  padding-right: 0;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.text-orange {
+  color: #FFC700;
+}
+
+a.dropdown-trigger {
+  height: 22.5px;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-items-flex-end {
+  align-items: flex-end !important;
+}
+
+.bg-gold {
+  background-color: #FFC700;
+}
+
+.gold-text {
+  color: #FFC700;
+}
+
+.fixed-action-btn {
+  right: 60px;
+  bottom: 60px;
+}
+
+/* css of the Form on the restaurant.ejs(views) */
+
+.modal {
+  top:0;
+  max-width: 100%;
+  max-height: 85%; 
+  overflow: auto;
+} 
+
+.formReview {
+  padding: 0 2rem;
+}
+
+.input-field input:focus + label {
+  color: #FFC700 !important;
+}
+
+.input-field input:focus {
+  border-bottom: 1px solid #FFC700 !important;
+  box-shadow: 0 1px 0 0 #FFC700 !important;
+}
+
+.btn.modal-submit {
+  background-color: #FFC700;
+}
+
+ul.dropdown-content.select-dropdown li span {
+  color: #FFC700;
+}
+
+.input-field input.valid {
+  border-bottom: 1px solid #FFC700 !important;
+  box-shadow: 0 1px 0 0 #FFC700 !important;
+}
+
+.input-field input.invalid {
+ border-bottom: 1px solid red !important;
+ box-shadow: 0 1px 0 0 red !important;
+}
+
+.material-icons.active {
+  color: #FFC700 !important;
+}
+
+.hover-gold:hover {
+  color: #FFC700 !important;
+}
+
+.opaque {
+  background-color: rgba(0, 0, 0, .3) !important;
+}
+
+@media (max-width: 600px) { 
+
+  h1 {
+      padding: 0 20px;
+      font-size: 3rem;
+  }
+
+  h5 {
+      padding: 0 20px;
+      font-size: 1.4rem;
+  }
+
+  .fixed-action-btn {
+    right: 20px !important;
+    bottom: 20px !important;
+  }
+
+  .btn-floating.btn-large {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+  }
+
+  .btn-floating.btn-large i {
+    line-height: 30px;
+  }
+
+  .btn-large {
+    height: 30px;
+    line-height: 30px;
+  }
+
+}
+
+@media (max-width: 1000px) { 
+
+  .brand-logo {
+      padding-left: 30px !important;
+  }
+  
+  .fixed-action-btn {
+    right: 30px;
+    bottom: 30px;
+  }
+
+}

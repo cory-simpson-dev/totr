@@ -1,0 +1,117 @@
+<div class="bg-gold width-100">
+  <h1 class="title center">taste of the town reviews</h1>
+</div>
+<div class="black width-100 margin-bottom-30">
+  <h5 class="center white-text">read and write reviews without the annoying photos</h5>
+</div>
+
+<main class="container">
+    
+<%posts.forEach(post=>{ %>
+  <div class="row no-margin-bottom" data-id='<%=post._id%>'>
+    <div class="col s12 offset-m1 m10">
+      <div class="card padding">
+        <div class="row margin-bottom-10">
+          <!-- <div class="col s2 center">
+            <i class="material-icons large">account_circle</i>
+          </div> -->
+          <div class="col s12">
+            <%if(user){%>
+              <%if(post.userId._id==user._id.toString()){%>
+                <div class="row margin-bottom-10 flex align-items-flex-end">
+                  <div class="col s10">
+                    <a class="text-orange" href="/"><%=post.userId.userName%> </a>                    
+                  </div>
+                  <div class="col s2">
+                    <a class="btn-floating bg-gold right" href="/reviews/<%=post._id%>"><i class="material-icons edit bg-gold">mode_edit</i></a>
+                  </div>
+                </div>
+                <div class="row margin-bottom-10">
+                  <div class="col s12">
+                    <h2 class="card-title left no-margin"><%=post.restaurant.toUpperCase()%> <span class="foodTypeSection"><%=post.foodType.toUpperCase()%></span></h2>                    
+                  </div>
+                </div>
+                <div class="row margin-bottom-10">
+                  <div class="col s12">
+                    <span><%=post.city.toUpperCase()%>, <%=post.state.toUpperCase()%>, <%=post.country.split('-').join(' ').toUpperCase()%></span>                    
+                  </div>
+                </div>
+                <div class="row margin-bottom-10">
+                  <div class="col s12">
+                    <span class="left no-margin"><%=post.favDish%></span>
+                  </div>
+                </div>
+              <%}else{%>
+                <div class="row margin-bottom-10">
+                  <div class="col s12">
+                    <a class="text-orange" href="/reviews/user/<%=post.userId._id.toString()%>"><%=post.userId.userName%></a>                    
+                  </div>
+                </div>
+                <div class="row margin-bottom-10">
+                  <div class="col s12">
+                    <h2 class="card-title left no-margin"><%=post.restaurant.toUpperCase()%> <span class="foodTypeSection"><%=post.foodType.toUpperCase()%></span></h2>                    
+                  </div>
+                </div>
+                <div class="row margin-bottom-10">
+                  <div class="col s12">
+                    <span><%=post.city.toUpperCase()%>, <%=post.state.toUpperCase()%>, <%=post.country.split('-').join(' ').toUpperCase()%></span>                    
+                  </div>
+                </div>
+                <div class="row margin-bottom-10">
+                  <div class="col s12">
+                    <span class="left no-margin"><%=post.favDish%></span>
+                  </div>
+                </div>
+                <%}%>
+            <%}else{%>
+              <div class="row margin-bottom-10">
+                <div class="col s12">
+                  <a class="text-orange" href="/reviews/user/<%=post.userId._id.toString()%>"><%=post.userId.userName%></a>                  
+                </div>
+              </div>
+              <div class="row margin-bottom-10">
+                <div class="col s12">
+                  <h2 class="card-title left no-margin"><%=post.restaurant.toUpperCase()%> <span class="foodTypeSection"><%=post.foodType.toUpperCase()%></span></h2>                  
+                </div>
+              </div>
+              <div class="row margin-bottom-10">
+                <div class="col s12">
+                  <span><%=post.city.toUpperCase()%>, <%=post.state.toUpperCase()%>, <%=post.country.split('-').join(' ').toUpperCase()%></span>                  
+                </div>
+              </div>
+              <div class="row margin-bottom-10">
+                <div class="col s12">
+                  <span class="left no-margin"><%=post.favDish%></span>
+                </div>
+              </div>
+            <%}%>
+          </div>
+        </div>
+        <div class="row margin-bottom-10">
+          <%if(user){%>
+            <%if(post.userId._id==user._id.toString()){%>
+              <div class="col s10">
+                <p class="commentSection no-margin"><%=post.comment%></p>
+              </div>
+              <div class="col s2">
+                <a id='<%=post._id%>' class="btn-floating black right delete" href="#"><i class=" material-icons black">delete</i></a>
+              </div>
+              <% } else { %>
+                <div class="col s12">
+                  <p class="commentSection no-margin"><%=post.comment%></p>
+                </div>
+              <% }%>
+          <% } else { %>
+            <div class="col s12">
+              <p class="commentSection no-margin"><%=post.comment%></p>
+            </div>
+          <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<%}) %>
+
+</main>
