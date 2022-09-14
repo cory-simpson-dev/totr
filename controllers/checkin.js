@@ -6,6 +6,7 @@ module.exports = {
         try{
             const posts = await Checkin.find({status:"public"})
             .populate('userId')
+            .sort({_id: -1})
             .lean()
             res.render('reviews.ejs', {title: 'Tastes of the Town', posts: posts, user: req.user, countryData: countryList.getData()})
         }catch(err){
@@ -17,6 +18,7 @@ module.exports = {
         try{
             const posts = await Checkin.find({userId:req.params.id,status:"public"})
             .populate('userId')
+            .sort({_id: -1})
             res.render('user.ejs', {title: 'Tastes of the Town', posts: posts, user: req.user, countryData: countryList.getData()})
         }catch(err){
             console.log(err)
